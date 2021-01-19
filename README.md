@@ -4,13 +4,17 @@
 https://github.com/takahashikazatake/laravel8-vue
 
 // ターミナルからインターンシップ用開発環境をcloneする(フォルダは任意の場所で)
+```
 git clone <forkしたリポジトリのwebURL/SSH>
+```
 
 // cloneしたリポジトリへ移動後、dockerを立ち上げる
+```
 cd laravel8-vue
 docker-compose build && docker-compose up -d
 // ここでlocalhostへアクセスしてみる
 http://localhost/
+```
 
 // おそらく以下のエラーになるはず。
 ```
@@ -19,23 +23,31 @@ Fatal error: require(): Failed opening required '/var/www/html/public/../vendor/
 ```
 
 // appコンテナ内でcomposerをインストールする。
+```
 docker-compose exec app composer install
+```
 
 // keygenのため環境変数のファイルをコピー(laravelフォルダで)
+```
 cd laravel
 cp .env.example .env
+```
 
 // 親ディレクトリへ戻ってlaravel用の鍵を作成する
+```
 cd ..
 docker-compose exec app php artisan key:generate
+```
 
 // ここでlocalhostへアクセスしてみる(うまく画面が表示されればOK)
 http://localhost/
 
 // npm周り
+```
 cd laravel
 npm install
 npm run dev // npm run watch-pollでバックグラウンド実行
+```
 
 
 ### わからないことについて調べるときのコツ
