@@ -60,10 +60,12 @@ Laravelの基本機能に関しては公式ドキュメントがお勧めです�
 
 #### Laravel 公式ドキュメント(翻訳版)
 https://readouble.com/laravel/8.x/ja/structure.html
+
 https://readouble.com/laravel/7.x/ja/structure.html
 
 #### Laravel 公式ドキュメント(オリジナル)
 https://laravel.com/docs/8.x
+
 https://laravel.com/docs/7.x
 
 #### vue.js公式ドキュメント
